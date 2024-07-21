@@ -1,4 +1,3 @@
-import { lazy } from "react";
 import {
   BrowserRouter as Router,
   Routes,
@@ -6,8 +5,8 @@ import {
   Navigate,
 } from "react-router-dom";
 
-const Home = lazy(() => import("../modules/home"));
-const LoginPage = lazy(() => import("../modules/login"));
+import LoginPage from "../modules/login";
+import Home from "../modules/home";
 
 const RouteLayout = () => {
   return (
