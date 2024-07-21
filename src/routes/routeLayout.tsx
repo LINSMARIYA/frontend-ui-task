@@ -14,7 +14,7 @@ const RouteLayout = () => {
       <div className="h-[100vh] pb-[69px] flex justify-center items-center">
         <Routes>
           <Route
-            path="/frontend-ui-task/"
+            path="/frontend-ui-task"
             element={<Navigate to="/frontend-ui-task/login" />}
           />
           <Route path="/frontend-ui-task/login" element={<LoginPage />} />
