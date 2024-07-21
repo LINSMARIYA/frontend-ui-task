@@ -14,8 +14,11 @@ const Login = ({ customContainerStyle }: { customContainerStyle?: string }) => {
   const onClickLogIn = () => {
     if (location.pathname === "/frontend-ui-task/home") {
       onClickRegister();
+    } else if (location.pathname === "/frontend-ui-task/signIn") {
+      navigate("/frontend-ui-task/login");
     } else navigate("/frontend-ui-task/home");
   };
+
   const onClickRegister = () => {
     if (location.pathname === "/frontend-ui-task/login") {
       navigate("/frontend-ui-task/signIn");
