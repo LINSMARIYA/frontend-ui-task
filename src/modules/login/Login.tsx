@@ -4,7 +4,13 @@ import { useNavigate, useLocation } from "react-router-dom";
 import Button from "../../components/button/button";
 import TextInput from "../../components/TextInput/textInput";
 
-const Login = ({ customContainerStyle }: { customContainerStyle?: string }) => {
+const Login = ({
+  customContainerStyle,
+  onClickButton,
+}: {
+  customContainerStyle?: string;
+  onClickButton?: (val: boolean) => void;
+}) => {
   const navigate = useNavigate();
 
   const location = useLocation();
@@ -13,7 +19,7 @@ const Login = ({ customContainerStyle }: { customContainerStyle?: string }) => {
 
   const onClickLogIn = () => {
     if (location.pathname === "/frontend-ui-task/home") {
-      onClickRegister();
+      onClickButton?.(isLogin);
     } else if (location.pathname === "/frontend-ui-task/signIn") {
       navigate("/frontend-ui-task/login");
     } else navigate("/frontend-ui-task/home");

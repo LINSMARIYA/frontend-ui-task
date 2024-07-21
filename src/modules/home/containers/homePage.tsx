@@ -16,6 +16,10 @@ const homePage = () => {
     setIsOpen(true);
   };
 
+  const onClickLoginButton = () => {
+    setIsOpen(false);
+  };
+
   return (
     <div className="text-white w-[700px] pt-[69px] px-10 scrollbar overflow-auto scroll-smooth max-h-screen pb-5">
       <div className="h-full">
@@ -46,7 +50,7 @@ const homePage = () => {
         isOpen={isModalOpen}
         onClose={() => setIsOpen(false)}
       >
-        <Login />
+        <Login onClickButton={onClickLoginButton} />
       </Modal>
     </div>
   );
