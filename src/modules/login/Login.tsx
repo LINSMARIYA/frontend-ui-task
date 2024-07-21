@@ -12,7 +12,9 @@ const Login = ({ customContainerStyle }: { customContainerStyle?: string }) => {
   const [isLogin, setIsLogIn] = useState(true);
 
   const onClickLogIn = () => {
-    navigate("/frontend-ui-task/home");
+    if (location.pathname === "/frontend-ui-task/home") {
+      onClickRegister();
+    } else navigate("/frontend-ui-task/home");
   };
   const onClickRegister = () => {
     if (location.pathname === "/frontend-ui-task/login") {
@@ -20,7 +22,6 @@ const Login = ({ customContainerStyle }: { customContainerStyle?: string }) => {
     } else if (location.pathname === "/frontend-ui-task/signIn") {
       navigate("/frontend-ui-task/login");
     }
-
     setIsLogIn((prev) => !prev);
   };
 
