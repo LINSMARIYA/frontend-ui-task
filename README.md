@@ -1,4 +1,4 @@
-#Atlys Frontend Task
+# Atlys Frontend Task
 
 https://linsmariya.github.io/frontend-ui-task/
 
