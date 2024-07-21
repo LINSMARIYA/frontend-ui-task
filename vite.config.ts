@@ -14,4 +14,5 @@ export default defineConfig({
    include: "**/*.svg",
   }),
  ],
+ base: '/frontend-ui-task/'
 });

@@ -13,10 +13,13 @@ const RouteLayout = () => {
     <Router>
       <div className="h-[100vh] pb-[69px] flex justify-center items-center">
         <Routes>
-          <Route path="/" element={<Navigate to="/login" />} />
-          <Route path="/login" element={<LoginPage />} />
-          <Route path="/signIn" element={<LoginPage />} />
-          <Route path="/home" element={<Home />} />
+          <Route
+            path="/frontend-ui-task/"
+            element={<Navigate to="/frontend-ui-task/login" />}
+          />
+          <Route path="/frontend-ui-task/login" element={<LoginPage />} />
+          <Route path="/frontend-ui-task/signIn" element={<LoginPage />} />
+          <Route path="/frontend-ui-task/home" element={<Home />} />
         </Routes>
       </div>
     </Router>

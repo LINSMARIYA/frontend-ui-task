@@ -12,13 +12,13 @@ const Login = ({ customContainerStyle }: { customContainerStyle?: string }) => {
   const [isLogin, setIsLogIn] = useState(true);
 
   const onClickLogIn = () => {
-    navigate("/home");
+    navigate("/frontend-ui-task/home");
   };
   const onClickRegister = () => {
-    if (location.pathname === "/login") {
-      navigate("/signIn");
-    } else if (location.pathname === "/signIn") {
-      navigate("/login");
+    if (location.pathname === "/frontend-ui-task/login") {
+      navigate("/frontend-ui-task/signIn");
+    } else if (location.pathname === "/frontend-ui-task/signIn") {
+      navigate("/frontend-ui-task/login");
     }
 
     setIsLogIn((prev) => !prev);
@@ -63,7 +63,10 @@ const Login = ({ customContainerStyle }: { customContainerStyle?: string }) => {
           />
         </div>
 
-        <Button label="Login now" onClick={onClickLogIn} />
+        <Button
+          label={isLogin ? "Login now" : "continue"}
+          onClick={onClickLogIn}
+        />
         <div className="text-white font-semibold text-lg leading-5 mt-1.5">
           <div className="flex text-sm font-medium leading-4 pt-3">
             <div className="text-granite pr-1">
