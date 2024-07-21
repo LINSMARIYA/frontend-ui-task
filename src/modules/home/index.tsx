@@ -1,11 +1,7 @@
-import HomePage from "./homePage";
+import HomePage from "./containers/homePage";
 
-const index = () => {
-  return (
-    <div>
-      <HomePage />
-    </div>
-  );
+const Home = () => {
+  return <HomePage />;
 };
 
-export default index;
+export default Home;

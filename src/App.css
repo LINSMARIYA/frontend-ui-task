@@ -11,3 +11,45 @@ body {
   background-color: #131319;
   /* Add any other global styles here */
 }
+
+.scrollbar {
+  overflow: auto; /* Allows content to overflow */
+  scrollbar-width: none; /* For Firefox */
+  -ms-overflow-style: none; /* For Internet Explorer and Edge */
+}
+
+.scrollbar::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Opera */
+}
+
+/* Grow animation for modal */
+@keyframes grow {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.modal-exit{
+  animation: fadeOut 0.3s ease-out forwards;
+}
+/* Modal animation class */
+.modal-grow {
+  animation: grow 0.3s ease-out;
+}
+
+
+

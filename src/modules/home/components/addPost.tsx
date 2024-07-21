@@ -1,14 +1,12 @@
-import { FC, useState } from "react";
-import Button from "./button";
+import { FC } from "react";
 
-const createPost: FC = () => {
-  const [text, setText] = useState("");
+import Button from "../../../components/button/button";
 
-  const onClickPost = () => {};
+type CreatePostProps = {
+  onClickPost: () => void;
+};
 
-  const handleChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
-    setText(event.target.value);
-  };
+const CreatePost: FC<CreatePostProps> = ({ onClickPost }) => {
   return (
     <div className="w-full bg-thunderGray px-5 py-6 rounded-md">
       <div className="text-silver font-medium text-[18px] leading-5 pb-4">
@@ -22,7 +20,6 @@ const createPost: FC = () => {
           <textarea
             className="w-full p-2 border border-gray-300 rounded-md resize-none placeholder-gray-400 bg-transparent focus:outline-none border-none focus:border-none outline-none"
             placeholder="How are you feeling today?"
-            onChange={handleChange}
             style={{
               minHeight: "32px",
               height: "auto",
@@ -33,10 +30,10 @@ const createPost: FC = () => {
         </div>
       </div>
       <div className="w-full flex justify-end pt-6">
-        <Button label="Post" onClick={onClickPost} customStyle="w-[113px]" />
+        <Button label="Post" onClick={onClickPost} customStyle="!w-[113px]" />
       </div>
     </div>
   );
 };
 
-export default createPost;
+export default CreatePost;
