@@ -10,16 +10,13 @@ import Home from "../modules/home";
 
 const RouteLayout = () => {
   return (
-    <Router>
+    <Router basename="/frontend-ui-task">
       <div className="h-[100vh] pb-[69px] flex justify-center items-center">
         <Routes>
-          <Route
-            path="/frontend-ui-task"
-            element={<Navigate to="/frontend-ui-task/login" />}
-          />
-          <Route path="/frontend-ui-task/login" element={<LoginPage />} />
-          <Route path="/frontend-ui-task/signIn" element={<LoginPage />} />
-          <Route path="/frontend-ui-task/home" element={<Home />} />
+          <Route path="/" element={<Navigate to="/login" />} />
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/signIn" element={<LoginPage />} />
+          <Route path="/home" element={<Home />} />
         </Routes>
       </div>
     </Router>

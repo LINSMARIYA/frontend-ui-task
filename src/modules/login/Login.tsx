@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 
 import Button from "../../components/button/button";
@@ -18,21 +18,27 @@ const Login = ({
   const [isLogin, setIsLogIn] = useState(true);
 
   const onClickLogIn = () => {
-    if (location.pathname === "/frontend-ui-task/home") {
+    if (location.pathname === "/home") {
       onClickButton?.(isLogin);
-    } else if (location.pathname === "/frontend-ui-task/signIn") {
-      navigate("/frontend-ui-task/login");
-    } else navigate("/frontend-ui-task/home");
+    } else if (location.pathname === "/signIn") {
+      navigate("/login");
+    } else {
+      navigate("/home");
+    }
   };
 
   const onClickRegister = () => {
-    if (location.pathname === "/frontend-ui-task/login") {
-      navigate("/frontend-ui-task/signIn");
-    } else if (location.pathname === "/frontend-ui-task/signIn") {
-      navigate("/frontend-ui-task/login");
+    if (location.pathname === "/login") {
+      navigate("/signIn");
+    } else if (location.pathname === "/signIn") {
+      navigate("/login");
     }
-    setIsLogIn((prev) => !prev);
   };
+
+  useEffect(() => {
+    if (location.pathname === "/login") setIsLogIn(true);
+    else setIsLogIn(false);
+  }, [location]);
 
   return (
     <div className="h-full w-full rounded-md border-gradient bg-gradient-to-b from-gray-300 to-gray-700 p-[2px]">
@@ -41,7 +47,7 @@ const Login = ({
       >
         <div className="text-center">
           <div className="text-doveGray font-medium text-sm leading-4">
-            {isLogin ? "Welcome Back" : "SIGN UP"}
+            {isLogin ? "WELCOME BACK" : "SIGN UP"}
           </div>
           <div className="text-white font-semibold text-lg leading-5 mt-1.5">
             {isLogin

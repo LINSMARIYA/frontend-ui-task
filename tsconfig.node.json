@@ -9,7 +9,7 @@
     "allowSyntheticDefaultImports": true,
     "strict": true,
     "noEmit": true,
-    "baseUrl": "./",
+    "baseUrl": "/frontend-ui-task/",
     "paths": {
       "@src": ["src/*"]
     }
