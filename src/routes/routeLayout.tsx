@@ -8,6 +8,7 @@ import {
 import LoginPage from "../modules/login";
 import Home from "../modules/home";
 import Profile from "../modules/profile";
+import NotFound from '../modules/404";
 
 const RouteLayout = () => {
   return (
@@ -19,6 +20,7 @@ const RouteLayout = () => {
           <Route path="/signIn" element={<LoginPage />} />
           <Route path="/home" element={<Home />} />
           <Route path="/profile" element={<Profile />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </div>
     </Router>
