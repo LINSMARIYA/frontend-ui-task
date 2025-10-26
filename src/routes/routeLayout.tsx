@@ -7,6 +7,7 @@ import {
 
 import LoginPage from "../modules/login";
 import Home from "../modules/home";
+import Profile from "../modules/profile";
 
 const RouteLayout = () => {
   return (
@@ -17,6 +18,7 @@ const RouteLayout = () => {
           <Route path="/login" element={<LoginPage />} />
           <Route path="/signIn" element={<LoginPage />} />
           <Route path="/home" element={<Home />} />
+          <Route path="/profile" element={<Profile />} />
         </Routes>
       </div>
     </Router>
