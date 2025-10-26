@@ -5,6 +5,7 @@ import Post from "../components/post";
 import post from "../../../constants/post";
 import Modal from "../../../components/modal/modal";
 import Login from "../../login/Login";
+import Navbar from "@/components/Navbar";
 
 const homePage = () => {
   const [isModalOpen, setIsOpen] = useState(false);
@@ -22,7 +23,8 @@ const homePage = () => {
 
   return (
     <div className="text-white w-[700px] pt-[69px] px-10 scrollbar overflow-auto scroll-smooth max-h-screen pb-5">
-      <div className="h-full">
+      <Navbar />
+      <div className="h-full min-h-screen">
         <div className="text-silver text-[28px] font-medium leading-8 text-left">{`Hello ${userFirstName}`}</div>
         <div className="text-base font-normal leading-6 text-granite pt-3 pb-10 md:w-[70%]">
           {
