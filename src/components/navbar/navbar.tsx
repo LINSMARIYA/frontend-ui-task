@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { User } from "lucide-react";
-import { Avatar, AvatarFallback } from "@/components/ui/avatar";
+import { Avatar, AvatarFallback } from "@/components/avatar/avatar";
 
 const Navbar = () => {
   return (
